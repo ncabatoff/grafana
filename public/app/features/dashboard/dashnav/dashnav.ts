@@ -37,14 +37,14 @@ export class DashNavCtrl {
       $scope.appEvent('show-modal', {templateHtml: '<help-modal></help-modal>'});
     };
 
-    $scope.showAclModal = function() {
-      var modalScope = $scope.$new();
-      modalScope.dashboardId = $scope.dashboard.id;
-      $scope.appEvent('show-modal', {
-        templateHtml: '<acl-modal></acl-modal>',
-        scope: modalScope
-      });
-    };
+    // $scope.showAclModal = function() {
+    //   var modalScope = $scope.$new();
+    //   modalScope.dashboardId = $scope.dashboard.id;
+    //   $scope.appEvent('show-modal', {
+    //     templateHtml: '<acl-modal></acl-modal>',
+    //     scope: modalScope
+    //   });
+    // };
 
     $scope.starDashboard = function() {
       if ($scope.dashboardMeta.isStarred) {

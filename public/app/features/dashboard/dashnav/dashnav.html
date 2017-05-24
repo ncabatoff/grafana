@@ -67,7 +67,6 @@
 			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('settings');">Settings</a></li>
 			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('annotations');">Annotations</a></li>
 			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="openEditView('templating');">Templating</a></li>
-			<li ng-if="dashboardMeta.canEdit && dashboardMeta.isFolder"><a class="pointer" ng-click="showAclModal();">Permissions</a></li>
 			<li ng-if="dashboardMeta.canEdit"><a class="pointer" ng-click="viewJson();">View JSON</a></li>
 			<li ng-if="contextSrv.isEditor && !dashboard.editable"><a class="pointer" ng-click="makeEditable();">Make Editable</a></li>
 			<li ng-if="contextSrv.isEditor"><a class="pointer" ng-click="saveDashboardAs();">Save As...</a></li>
