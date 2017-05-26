@@ -204,6 +204,14 @@ export class BackendSrv {
     options = (options || {});
     return this.post('/api/dashboards/db/', {dashboard: dash, parentId: dash.parentId, overwrite: options.overwrite === true});
   }
+
+  saveDashboardFolder(name) {
+    const dash = {
+      title: name
+    };
+
+    return this.post('/api/dashboards/db/', {dashboard: dash, isFolder: true, overwrite: false});
+  }
 }
 
 coreModule.service('backendSrv', BackendSrv);
