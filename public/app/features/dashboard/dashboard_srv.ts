@@ -104,6 +104,9 @@ export class DashboardSrv {
     newScope.clone = this.dash.getSaveModelClone();
     newScope.clone.editable = true;
     newScope.clone.hideControls = false;
+    newScope.clone.meta = {};
+    newScope.clone.meta.parentId = this.dash.meta.parentId;
+    newScope.clone.meta.isFolder = this.dash.meta.isFolder;
 
     this.$rootScope.appEvent('show-modal', {
       src: 'public/app/features/dashboard/partials/saveDashboardAs.html',
