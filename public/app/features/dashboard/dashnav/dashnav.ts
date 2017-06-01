@@ -150,6 +150,10 @@ export class DashNavCtrl {
       playlistSrv.stop(1);
     };
 
+    $scope.onFolderChange = function(parentId) {
+      $scope.dashboard.parentId = parentId;
+    };
+
     $scope.init();
   }
 }

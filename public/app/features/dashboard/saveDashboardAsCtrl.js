@@ -59,6 +59,10 @@ function (angular) {
         }
       });
     };
+
+    $scope.onFolderChange = function(parentId) {
+      $scope.clone.parentId = parentId;
+    };
   });
 
 });
