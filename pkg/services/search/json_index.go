@@ -54,9 +54,12 @@ func (index *JsonDashIndex) Search(query *Query) ([]*Hit, error) {
 	queryStr := strings.ToLower(query.Title)
 
 	for _, item := range index.items {
-		if len(results) > query.Limit {
-			break
-		}
+		// Rely on searchHandler that calls us to impose limits, so it can do so after
+		// tag filtering.  Maybe the tag filtering should be done here instead?
+
+		// if len(results) > query.Limit {
+		// 	 break
+		// }
 
 		// add results with matchig title filter
 		if strings.Contains(item.TitleLower, queryStr) {
